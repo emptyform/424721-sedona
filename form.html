@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Academy: Седона</title>
+	</head>
+	<body class="sedona-form-page">
+		<header class="main-header">
+			<div class="header-top">
+				<div class="container">
+					<div class="header-logo header-top__logo">
+						<a class="header-logo__link" href="index.html">
+							<img class="header-logo__icon" src="#" alt="Логотип Седона">
+						</a>
+					</div>
+					<div class="header-menu">
+						<button class="navigation-button header-top__button navigation-button--open"></button>
+						<button class="navigation-button header-top__button navigation-button--close"></button>
+						<nav class="header-navigation">
+							<ul class="nav-list">
+								<li class="nav-list__item"><a class="nav-list__link" href="index.html">Главная</a></li>
+								<li class="nav-list__item"><a class="nav-list__link" href="photo.html">Фото и видео</a></li>
+								<li class="nav-list__item"><a class="nav-list__link">Форма Отзыва</a></li>
+								<li class="nav-list__item"><a class="nav-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="header-promo">
+				<div class="container header-title">
+					<img class="header-title__icon" src="#" alt="welcome to the gorgeous">
+				</div>
+			</div>
+		</header>
+		
+		<section class="intro">
+			<div class="container">
+				<h1 class="intro__title">Оставьте свой отзыв</h1>
+				<p class="intro__description">Помогите нашим отелям стать лучше! оставьте
+				отзыв о них, а также о посещенных вами достопримечательностях</p>
+			</div>
+		</section>
+		
+		<form class="main-form" action="https://echo.htmlacademy.ru/" method="post">
+			<div class="container">
+				<div class="name">
+					<h2 class="name__title">Представьтесь:</h2>
+					<label class="name__item-label" for="firstname-field">Имя*:</label>
+					<input class="name__item-input" type="text" id="firstname-field" name="firstname" placeholder="Петр">
+					
+					<label class="name__item-label" for="surname-field">Фамилия*:</label>
+					<input class="name__item-input" type="text" id="surname-field" name="surname" placeholder="Иванов">
+					
+					<label class="name__item-label" for="patronymic-field">Отчество:</label>
+					<input class="name__item-input" type="text" id="patronymic-field" name="patronymic" placeholder="Александрович">
+				</div>
+				<div class="contacts">
+					<h2 class="contacts__title">Контактная информация:</h2>
+					<label class="contacts__item-label" for="tel-field">Контактный телефон*:</label>
+					<input class="contacts__item-input" type="tel" id="tel-field" name="tel" placeholder="Введите телефон">
+					
+					<label class="contacts__item-label" for="email-field">Электронная почта*:</label>
+					<input class="contacts__item-input" type="email" id="email-field" name="email" placeholder="Введите e-mail">
+				</div>
+				<div class="impression">
+					<h2 class="impression__title">Ваше общее впечатление:</h2>
+					<input class="impression__item-input" type="radio" id="impression-field-good" name="impression" value="good" checked>
+					<label class="impression__item-label" for="impression-field-good">Скорее положительное</label>
+					
+					<input class="impression__item-input" type="radio" id="impression-field-bad" name="impression" value="bad">
+					<label class="impression__item-label" for="impression-field-bad">Скорее отрицательное</label>
+					
+					<input class="impression__item-input" type="radio" id="impression-field-indifferently" name="impression" value="indifferently">
+					<label class="impression__item-label" for="impression-field-indifferently">Затрудняюсь ответить</label>
+				</div>
+				<div class="attractions">
+					<h2 class="attractions__title">Посещенные достопримечательности:</h2>
+					<input class="attractions__item-input" type="checkbox" id="checkbox-field-bridge" name="bridge" checked>
+					<label class="attractions__item-label" for="checkbox-field-bridge">Мост Дьявола</label>
+					
+					<input class="attractions__item-input" type="checkbox" id="checkbox-field-park" name="park" checked>
+					<label class="attractions__item-label" for="checkbox-field-park">Слайд-парк</label>
+					
+					<input class="attractions__item-input" type="checkbox" id="checkbox-field-mountain" name="mountain">
+					<label class="attractions__item-label" for="checkbox-field-mountain">Гора-Колокол</label>
+					
+					<input class="attractions__item-input" type="checkbox" id="checkbox-field-rocks" name="rocks" checked>
+					<label class="attractions__item-label" for="checkbox-field-rocks">Красные скалы</label>
+				</div>
+				<div class="comment">
+					<h2 class="comment__title">Опишите свои эмоции:</h2>
+					<textarea class="comment__item" placeholder="Опишите подробно все свои восторги "></textarea>
+				</div>
+				<div class="submit">
+					<input class="button submit__item" type="submit" value="Отправить отзыв">
+				</div>
+			</div>
+		</form>
+		<footer class="main-footer">
+			<div class="container">
+				<div class="main-footer__title tag">#visitsedona</div>
+				<div class="main-footer__social social">
+					<a class="button social__button social__button--tw" href="#">Твиттер</a>
+					<a class="button social__button social__button--fb" href="#">Фейсбук</a>
+					<a class="button social__button social__button--yt" href="#">Ютуб</a>
+				</div>
+				<div class="main-footer__copy copyright">
+					<a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+					<a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
+						<img class="copyright__icon" src="#" alt="логотип Html Academy">
+					</a>
+				</div>
+			</div>
+		</footer>
+		<div class="popup-failure">
+			<h2 class="popup-failure__title">Что-то пошло не так!</h2>
+			<p class="popup-failure__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+			<button class="button popup-failure__button">ok</button>
+		</div>
+		<div class="popup-success">
+			<h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
+			<p class="popup-success__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+			В ближайшее время мы опубликуем его на сайте.</p>
+			<button class="button popup-success__button">Закрыть окно</button>
+		</div>
+	</body>
+</html>
