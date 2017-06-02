@@ -3,17 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <header class="main-header">
         <div class="header-top">
-          <div class="header-logo header-top__logo">
-            <a class="header-logo__link" href="index.html">
-              <img class="header-logo__icon" src="#" alt="Логотип Седона">
-            </a>
-          </div>
-          <div class="header-menu">
+					<div class="header-menu">
             <button class="navigation-button header-top__button"></button>
             <nav class="header-navigation">
               <ul class="nav-list">
@@ -24,8 +21,13 @@
               </ul>
             </nav>
           </div>
+          <div class="header-logo header-top__logo">
+            <a class="header-logo__link">
+              <img class="header-logo__icon" src="#" alt="Логотип Седона">
+            </a>
+          </div>
         </div>
-        <div class="header-promo">
+        <div class="header-promo header-promo--small">
           <div class="header-title">
             <img class="header-title__icon" src="#" alt="welcome to the gorgeous">
           </div>
@@ -39,28 +41,34 @@
       <form class="main-form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form-group form-group--text">
           <h2 class="form-group__title form-group__title--text">Представьтесь:</h2>
-          <label class="form-group__item-label form-group__item-label--text" for="firstname-field">Имя*:</label>
-          <input class="form-group__item-input form-group__item-input--text" type="text" id="firstname-field" name="firstname" placeholder="Петр">
-          <label class="form-group__item-label form-group__item-label--text" for="surname-field">Фамилия*:</label>
-          <input class="form-group__item-input form-group__item-input--text" type="text" id="surname-field" name="surname" placeholder="Иванов">
-          <label class="form-group__item-label form-group__item-label--text" for="patronymic-field">Отчество:</label>
-          <input class="form-group__item-input form-group__item-input--text" type="text" id="patronymic-field" name="patronymic" placeholder="Александрович">
+					<div class="form-group__input-group">
+						<label class="form-group__item-label form-group__item-label--text" for="firstname-field">Имя*:</label>
+						<input class="form-group__item-input form-group__item-input--text" type="text" id="firstname-field" name="firstname" value="Петр">
+					</div>
+					<div class="form-group__input-group">
+						<label class="form-group__item-label form-group__item-label--text" for="surname-field">Фамилия*:</label>
+						<input class="form-group__item-input form-group__item-input--text" type="text" id="surname-field" name="surname" value="Иванов">
+					</div>
+					<div class="form-group__input-group">
+						<label class="form-group__item-label form-group__item-label--text" for="patronymic-field">Отчество:</label>
+						<input class="form-group__item-input form-group__item-input--text" type="text" id="patronymic-field" name="patronymic" value="Александрович">
+					</div>
         </div>
         <div class="form-group form-group--contacts">
-          <h2 class="form-group__title form-group__title">Контактная информация:</h2>
+          <h2 class="form-group__title form-group__title--contacts">Контактная информация:</h2>
           <label class="form-group__item-label form-group__item-label--contacts" for="tel-field">Контактный телефон*:</label>
-          <input class="form-group__item-input form-group__item-input--tel" type="tel" id="tel-field" name="tel" placeholder="Введите телефон">
+          <input class="form-group__item-input form-group__item-input--tel" type="tel" id="tel-field" name="tel" value="Введите телефон">
           <label class="form-group__item-label form-group__item-label--contacts" for="email-field">Электронная почта*:</label>
-          <input class="form-group__item-input form-group__item-input--mail" type="email" id="email-field" name="email" placeholder="Введите e-mail">
+          <input class="form-group__item-input form-group__item-input--mail" type="email" id="email-field" name="email" value="Введите e-mail">
         </div>
         <div class="form-group form-group--radio">
-          <h2 class="form-group__title form-group__title">Ваше общее впечатление:</h2>
-          <input class="form-group__item-input form-group__title--radio" type="radio" id="impression-field-good" name="impression" value="good" checked>
-          <label class="form-group__item-label form-group__title--radio" for="impression-field-good">Скорее положительное</label>
-          <input class="form-group__item-input form-group__title--radio" type="radio" id="impression-field-bad" name="impression" value="bad">
-          <label class="form-group__item-label form-group__title--radio" for="impression-field-bad">Скорее отрицательное</label>
-          <input class="form-group__item-input form-group__title--radio" type="radio" id="impression-field-indifferently" name="impression" value="indifferently">
-          <label class="form-group__item-label form-group__title--radio" for="impression-field-indifferently">Затрудняюсь ответить</label>
+          <h2 class="form-group__title form-group__title--radio">Ваше общее впечатление:</h2>
+          <input class="form-group__item-input form-group__item-input--radio" type="radio" id="impression-field-good" name="impression" value="good" checked>
+          <label class="form-group__item-label form-group__item-label--radio" for="impression-field-good">Скорее положительное</label>
+          <input class="form-group__item-input form-group__item-input--radio" type="radio" id="impression-field-bad" name="impression" value="bad">
+          <label class="form-group__item-label form-group__item-label--radio" for="impression-field-bad">Скорее отрицательное</label>
+          <input class="form-group__item-input form-group__item-input--radio" type="radio" id="impression-field-indifferently" name="impression" value="indifferently">
+          <label class="form-group__item-label form-group__item-label--radio" for="impression-field-indifferently">Затрудняюсь ответить</label>
         </div>
         <div class="form-group form-group--checkbox">
           <h2 class="form-group__title form-group__title--checkbox">Посещенные достопримечательности:</h2>
@@ -75,7 +83,7 @@
         </div>
         <div class="form-group form-group--textarea">
           <h2 class="form-group__title form-group__title--textarea">Опишите свои эмоции:</h2>
-          <textarea class="form-group__item form-group__item--textarea" placeholder="Опишите подробно все свои восторги "></textarea>
+          <textarea class="form-group__item form-group__item--textarea">Опишите подробно все свои восторги</textarea>
         </div>
         <div class="submit">
           <input class="button submit__item" type="submit" value="Отправить отзыв">
@@ -91,7 +99,7 @@
         <div class="main-footer__copy copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
           <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__icon" src="#" alt="логотип Html Academy">
+            <img class="copyright__icon" src="img/htmlacademy.svg" alt="логотип Html Academy">
           </a>
         </div>
       </footer>
