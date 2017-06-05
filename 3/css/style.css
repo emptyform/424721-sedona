@@ -1,75 +1,5 @@
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff");
-  src: url("../fonts/ptsansbold.woff");
-  src: url("../fonts/ptsans.woff2");
-  src: url("../fonts/ptsansbold.woff2");
-}
-.container {
-  margin: 0 auto;
-  padding: 0;
-  width: 320px;
-  outline: 1px solid black;
-}
-.header-top {
-  position: relative;
-}
-.header-top__button {
-  position: absolute;
-  top: 17px;
-  right: 20px;
-}
-.header-logo {
-  position: relative;
-  height: 56px;
-  background-color: white;
-}
-.header-logo__link {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.header-menu {
-  margin: 0;
-  padding: 0;
-}
-.navigation-button {
-  width: 23px;
-  height: 23px;
-}
-.nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 40px;
-  color: white;
-  background-color: #81b3d2;
-}
-.nav-list__link {
-  display: block;
-  padding: 7px 0px;
-  padding-bottom: 9px;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  text-align: center;
-  color: inherit;
-  background-color: inherit;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-.header-promo {
-  position: relative;
-  height: 389px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  outline: 1px solid red;
-}
-.header-promo--small {
-  height: 155px;
-  background-position: center -232px;
+.content-padding {
+  padding: 0 30px;
 }
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -462,14 +392,103 @@ template {
 [hidden] {
   display: none;
 }
-.content-padding {
-  padding: 0 30px;
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff");
+  src: url("../fonts/ptsansbold.woff");
+  src: url("../fonts/ptsans.woff2");
+  src: url("../fonts/ptsansbold.woff2");
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 320px;
+  outline: 1px solid black;
+}
+.header-top {
+  position: relative;
+}
+.header-top__button {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+}
+.header-title__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-logo {
+  position: relative;
+  height: 56px;
+  background-color: white;
+}
+.header-logo__link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.header-menu {
+  margin: 0;
+  padding: 0;
+}
+.navigation-button {
+  width: 23px;
+  height: 23px;
+}
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 40px;
+  color: white;
+  background-color: #81b3d2;
+}
+.nav-list__link {
+  display: block;
+  padding: 7px 0px;
+  padding-bottom: 9px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+  background-color: inherit;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.header-promo {
+  position: relative;
+  height: 389px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: 1px solid red;
+}
+.header-promo--small {
+  height: 155px;
+  background-position: center -232px;
 }
 .intro {
   margin: 0;
   padding: 0;
   padding-bottom: 6px;
-  background-color: white;
 }
 .intro--photo {
   padding-bottom: 14px;
@@ -545,7 +564,6 @@ template {
   margin-top: -10px;
   padding-top: 17px;
   padding-bottom: 35px;
-  background-color: white;
 }
 .note-block {
   margin-left: 70px;
@@ -555,14 +573,14 @@ template {
   outline: 1px solid black;
 }
 .note-block__title {
-  color: #000000;
+  color: black;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
 }
 .note-block__description {
   margin-bottom: 0px;
-  color: #333333;
+  color: black;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -574,7 +592,6 @@ template {
 .hotels {
   margin: 0;
   padding-bottom: 48px;
-  background-color: white;
   text-align: center;
 }
 .hotels__title {
@@ -660,7 +677,6 @@ template {
 .main-form {
   margin: 0;
   padding: 0;
-  background-color: white;
 }
 .form-group {
   margin: 0;
@@ -829,7 +845,6 @@ template {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 0;
-  background-color: white;
 }
 .photo-block {
   padding-top: 20px;
@@ -870,7 +885,6 @@ template {
 .video-block {
   margin: 0;
   padding-bottom: 36px;
-  background-color: white;
   text-align: center;
 }
 .video-block__title {
@@ -967,16 +981,9 @@ template {
   border: none;
   background-color: lightgray;
 }
-html {
-  margin: 0;
-  padding: 0;
+.failure {
+  display: none;
 }
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "PT Sans";
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
+.success {
+  display: none;
 }
