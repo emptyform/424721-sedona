@@ -1,4 +1,11 @@
 .features-other {
   margin-top: -8px;
   padding: 1px 0;
+	background-color: @feature-no-img-background;
+	@media (min-width: @tablet-width) {
+		display: flex;
+	}
+	@media (min-width: @desktop-width) {
+		justify-content: space-around;
+	}
 }

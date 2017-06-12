@@ -9,18 +9,16 @@
   <body>
     <div class="container">
       <header class="main-header">
-        <div class="header-top">
-          <div class="header-menu">
-            <button class="navigation-button header-top__button"></button>
-            <nav class="header-navigation">
-              <ul class="nav-list">
-                <li class="nav-list__item"><a class="nav-list__link nav-list__link--active">Главная</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="photo.html">Фото и видео</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="form.html">Форма Отзыва</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a></li>
-              </ul>
-            </nav>
-          </div>
+        <div class="header-top">          
+					<button class="navigation-button header-top__button"></button>
+					<nav class="header-navigation">
+						<ul class="nav-list">
+							<li class="nav-list__item"><a class="nav-list__link nav-list__link--active">Главная</a></li>
+							<li class="nav-list__item"><a class="nav-list__link" href="photo.html">Фото и видео</a></li>
+							<li class="nav-list__item"><a class="nav-list__link" href="form.html">Форма Отзыва</a></li>
+							<li class="nav-list__item"><a class="nav-list__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a></li>
+						</ul>
+					</nav>
           <div class="header-logo header-top__logo">
             <a class="header-logo__link">
               <img class="header-logo__icon" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
@@ -29,7 +27,7 @@
         </div>
         <div class="header-promo header-promo--big">
           <div class="header-title">
-            <img class="header-title__icon" src="img/text-sedona.svg" width="280" alt="Sedona">
+            <img class="header-title__icon header-title__icon--big" src="img/text-sedona.svg" width="280" alt="Sedona">
           </div>
         </div>
       </header>
@@ -38,9 +36,11 @@
         <p class="intro__description">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </section>
       <section class="feature feature--img-right">
-        <h2 class="feature__title">Настоящий городок</h2>
-        <div class="feature__number">— №1 —</div>
-        <p class="feature__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+				<div class="feature__text feature__text--img-right">
+					<h2 class="feature__title">Настоящий городок</h2>
+					<div class="feature__number">— №1 —</div>
+					<p class="feature__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+				</div>
         <img class="feature__photo" src="img/photo-city-mobile@1x.jpg" alt="НАСТОЯЩИЙ ГОРОДОК" width="320" height="260" >
       </section>
       <section class="notes">
@@ -50,7 +50,8 @@
         </div>
         <div class="note-block notes__item note-block--souvenirs">
           <h3 class="note-block__title">Сувениры</h3>
-          <p class="note-block__description">Не только китайского, но и местного производства!</p>
+          <p class="note-block__description note-block__description--souvenirs">Не только китайского,
+					но и местного производства!</p>
         </div>
         <div class="note-block notes__item note-block--food">
           <h3 class="note-block__title">Еда</h3>
@@ -58,10 +59,12 @@
         </div>
       </section>
       <section class="feature feature--img-left">
-        <h2 class="feature__title feature__title--img-left">Там есть Мост дьявола</h2>
-        <div class="feature__number">— №2 —</div>
-        <p class="feature__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-        <img class="feature__photo" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола" width="320" height="260">
+				<div class="feature__text feature__text--img-left">
+					<h2 class="feature__title feature__title--img-left">Там есть Мост дьявола</h2>
+					<div class="feature__number">— №2 —</div>
+					<p class="feature__description feature__description--img-left">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+				</div>
+				<img class="feature__photo feature__photo--left" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола" width="320" height="260">
       </section>
       <section class="features-other">
         <div class="feature feature--img-none">
@@ -82,8 +85,8 @@
       </section>
       <section class="hotels">
         <h2 class="hotels__title">Заинтересовались?</h2>
-        <p class="hotels__description">Укажите предполагаемые даты поездки, и мы покажем
-        вам лучшие предложения гостиниц в седоне</p>
+        <p class="hotels__description">Укажите предполагаемые даты поездки,
+				и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="button hotels__button" href="#">Найти гостиницу</a>
       </section>
       <div class="map"></div>

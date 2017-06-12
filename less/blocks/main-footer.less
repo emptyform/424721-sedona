@@ -2,11 +2,37 @@
   padding-top: 37px;
   background-color: @footer-background;
   text-align: center;
+	@media (min-width: @tablet-width) {
+		display: flex;
+		padding-left: 55px;
+		padding-right: 55px;
+		padding-bottom: 17px;
+		justify-content: space-between;
+	}
+	@media (min-width: @desktop-width) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
 }
 .main-footer__title {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
+	@media (min-width: @tablet-width) {
+		margin-top: 10px;
+		margin-left: 5px;
+	}
+	@media (min-width: @desktop-width) {
+		margin-left: 92px;
+	}
+}
+.main-footer__social {
+	@media (min-width: @tablet-width) {
+		margin-left: -5px;
+	}
+	@media (min-width: @desktop-width) {
+		margin-left: -92px;
+	}
 }
 .main-footer__copy {
   margin-top: 30px;

@@ -7,6 +7,21 @@
   line-height:40px;
   color: white;
   background-color: @main-color;
+	@media (min-width: @tablet-width) {
+		margin-top: -55px;
+		padding-right: 25px;
+		padding-left: 20px;
+		display: flex;
+		background-color: transparent;
+		justify-content: space-between;
+		font-size: 14px;
+		color: @text-dark-color;
+		z-index: 5;
+	}
+	@media (min-width: @desktop-width) {
+		padding-right: 70px;
+		padding-left: 62px;
+	}
 }
 .nav-list__link {
   display: block;
@@ -20,4 +35,24 @@
   background-color: inherit;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.nav-list__item {
+	@media (min-width: @tablet-width) {
+		padding-left: 30px;
+		outline: 1px solid blue;
+		&:nth-child(2) {
+			margin-left: 45px;
+			@media (min-width: @desktop-width) {
+				margin-left: 131px;
+			}
+		}
+		&:nth-child(3) {
+			margin-left: auto;
+			margin-right: 20px;
+			@media (min-width: @desktop-width) {
+				margin-right: 108px;
+			}
+		}
+	}
+
 }
