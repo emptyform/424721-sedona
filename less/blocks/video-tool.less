@@ -1,8 +1,16 @@
 .video-tool {
   position: relative;
   height: 111px;
-  outline: 1px solid blue;
   z-index: 2;
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 648px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 .video-tool__scale-box {
   margin: 0;
@@ -12,6 +20,9 @@
   height: 43px;
   background-color: @video-tool__scale-box-background;
   opacity: 0.6;
+  @media (min-width: @tablet-width) {
+    height: 93px;
+  }
 }
 .video-tool__scale {
   position: relative;
@@ -19,11 +30,20 @@
   margin-right: 22px;
   height: 3px;
   background-color: @video-tool__scale-background;
+  @media (min-width: @tablet-width) {
+    margin-top: 26px;
+    margin-left: 93px;
+    margin-right: 45px;
+    width: 389px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 540px;
+  }
 }
 .video-tool__marker {
   position: absolute;
   top: -3px;
-  left: 37px;
+  left: 113px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -38,4 +58,8 @@
   height: 66px;
   text-align: left;
   background-color: @video-tool__controls-background;
+  @media (min-width: @tablet-width) {
+    height: 0px;
+    background-color: transparent;
+  }
 }

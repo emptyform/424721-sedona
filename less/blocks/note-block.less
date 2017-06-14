@@ -1,20 +1,46 @@
 .note-block {
   margin-left: 70px;
   margin-right: 20px;
-  margin-top: 23px;
-  margin-bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 27px;
   outline: 1px solid black;
+  &--souvenirs {
+    order: 1;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: 97px;
+    padding: 0;
+    width: 163px;
+    text-align: center;
+  }
+  @media (min-width: @desktop-width) {
+    width: 285px;
+  }
 }
 .note-block__title {
+  margin-bottom: 15px;
   color: @text-dark-color;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 .note-block__description {
+  margin-top: 0px;
   margin-bottom: 0px;
   color: @text-dark-color;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+  @media (min-width: @tablet-width) {
+    margin-top: 22px;
+  }
+  @media (min-width: @desktop-width) {
+    &--souvenirs {
+      white-space: pre-line;
+    }
+  }
 }

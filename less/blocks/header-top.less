@@ -1,8 +1,23 @@
 .header-top {
   position: relative;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .header-top__button {
   position: absolute;
   top: 17px;
   right: 20px;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+.header-top__logo {
+  @media (min-width: @tablet-width) {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  order: -1;
+  }
 }
