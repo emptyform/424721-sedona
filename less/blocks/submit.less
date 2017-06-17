@@ -4,7 +4,6 @@
   padding-left: 20px;
   padding-right: 20px;
   order: 6;
-  outline: 1px solid red;
   @media (min-width: @tablet-width) {
     margin-top: 50px;
     margin-left: 60px;
@@ -19,15 +18,21 @@
   padding: 16px;
   box-sizing: border-box;
   width: 100%;
+  font-family: "PT Sans";
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   border: none;
   text-transform: uppercase;
+	&:hover {
+		background-color: @button-hover-background;
+	}
+	&:active {
+		color: @button-active-color;
+	}
   @media (min-width: @tablet-width) {
     padding-left: 62px;
     padding-right: 62px;
-    letter-spacing: -1px;
   }
   @media (min-width: @desktop-width) {
     padding-left: 148px;
