@@ -25,8 +25,9 @@
 }
 .nav-list__link {
   display: block;
+  margin-bottom: 1px;
   padding: 7px 0px;
-  padding-bottom: 9px;
+  padding-bottom: 8px;
   width: 100%;
   text-decoration: none;
   text-align: center;
@@ -36,18 +37,38 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
   @media (max-width: @tablet-width) {
     height: 100%;
+    &:hover {
+      background-color: @button-hover-background;
+    }
+    &:active {
+      color: @button-active-color;
+    }
   }
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-top: 6px;
     padding: 0;
-    background-color: lightyellow;
+    box-shadow: none;
+    &:hover {
+      color: @menu-tablet-hover-color;
+    }
+    &:active {
+      color: @menu-tablet-down-color;
+    }
+    &--active {
+      color: @menu-tablet-color-active;
+      &:hover {
+        color: @menu-tablet-hover-color-active;
+      }
+      &:active {
+        color: @menu-tablet-down-color-active;
+      }
+    }
   }
 }
 .nav-list__item {
   @media (min-width: @tablet-width) {
     padding-left: 30px;
-    outline: 1px solid blue;
     &:nth-child(2) {
       margin-left: 45px;
       @media (min-width: @desktop-width) {

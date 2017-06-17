@@ -1,51 +1,170 @@
 .form-group {
+  position: relative;
   margin: 0;
   padding: 0 20px;
-  outline: 1px solid red;
   &--text {
     font-size: 0;
     padding-bottom: 5px;
     order: 2;
+    &::before {
+      position: absolute;
+      top: -3px;
+      left: 0px;
+      display: block;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: @input-hover-background;
+    }
   }
   &--contacts {
     padding-bottom: 32px;
     order: 3;
+    &::before {
+      position: absolute;
+      top: -2px;
+      left: 0px;
+      display: block;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: @input-hover-background;
+    }
   }
   &--radio {
     padding-bottom: 25px;
     order: 1;
+    &::before {
+      position: absolute;
+      top: -1px;
+      left: 0px;
+      display: block;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: @input-hover-background;
+    }
   }
   &--checkbox {
     padding-bottom: 15px;
     order: 4;
+    &::before {
+      position: absolute;
+      top: -3px;
+      left: 0px;
+      display: block;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: @input-hover-background;
+    }
   }
   &--textarea {
     order: 5;
+    &::before {
+      position: absolute;
+      top: -1px;
+      left: 0px;
+      display: block;
+      content: " ";
+      width: 100%;
+      height: 1px;
+      background-color: @input-hover-background;
+    }
   }
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     &--radio {
       width: 50%;
+      &::before {
+        position: absolute;
+        top: 23px;
+        left: 100%;
+        display: block;
+        content: " ";
+        width: 1px;
+        height: 292px;
+        background-color: @input-hover-background;
+      }
     }
     &--text {
       width: 50%;
       padding-left: 55px;
-      padding-right: 55px;
+      padding-right: 63px;
+      &::before {
+        display: none;
+      }
     }
     &--contacts {
       margin-top: 22px;
       padding-left: 62px;
       padding-right: 62px;
       width: 100%;
+      &::before {
+        left: 60px;
+        top: 28px;
+        width: 124px;
+        background-color: @input-hover-background;
+      }
+      &::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 28px;
+        right: 60px;
+        width: 124px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
     }
     &--checkbox {
       margin-top: 6px;
       margin-bottom: 27px;
+      &::before {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        width: 124px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
+      &::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        width: 124px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
     }
     &--textarea {
       padding-left: 60px;
       padding-right: 60px;
       width: 100%;
+      &::before {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 27px;
+        left: 60px;
+        width: 124px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
+      &::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 27px;
+        right: 60px;
+        width: 124px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
     }
   }
   @media (min-width: @desktop-width) {
@@ -58,14 +177,74 @@
       padding-left: 30px;
       padding-right: 30px;
       padding-bottom: 9px;
+      &::before {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 30px;
+        left: 120px;
+        width: 280px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
+      &::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 30px;
+        right: 120px;
+        width: 280px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
     }
     &--checkbox {
       margin-bottom: 24px;
       width: 100%;
+      &::before {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 42px;
+        left: 120px;
+        width: 280px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
+      &::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 42px;
+        right: 120px;
+        width: 280px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
     }
     &--textarea {
       padding-left: 120px;
       padding-right: 120px;
+      &::before {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 30px;
+        left: 120px;
+        width: 280px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
+      &::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 30px;
+        right: 120px;
+        width: 280px;
+        height: 1px;
+        background-color: @input-hover-background;
+      }
     }
   }
 }
@@ -140,11 +319,13 @@
   }
 }
 .form-group__input-group {
-  outline: 1px solid blue;
   &--text {
     margin-bottom: 22px;
     white-space: nowrap;
-    overflow: hidden;
+    display: flex;
+    align-items: baseline;
+    box-sizing: border-box;
+    width: 280px;
   }
   &--checkbox {
     box-sizing: border-box;
@@ -153,6 +334,10 @@
     padding: 0;
   }
   @media (min-width: @tablet-width) {
+    &--text {
+      margin-left: 2px;
+      width: 100%;
+    }
     &--checkbox {
       margin-top: 8px;
       box-sizing: border-box;
@@ -176,7 +361,7 @@
   font-weight: 400;
   line-height: 26px;
   &--text {
-    padding-right: 10px;
+    padding-right: 14px;
   }
   &--contacts {
     display: block;
@@ -185,35 +370,88 @@
     margin-left: 20px;
   }
   &--radio {
-    margin-left: 42px;
+    position: relative;
+    margin-left: 80px;
     margin-right: 7px;
     white-space: nowrap;
     font-size: 18px;
     font-weight: 700;
     line-height: 69px;
     text-transform: none;
+    &::before {
+      position: absolute;
+      top: -15px;
+      display: block;
+      content: " ";
+      width:22px;
+      height: 22px;
+      background-color: #f2f2f2;
+      border: 17px solid #f2f2f2;
+      border-radius: 50%;
+    }
+    &:hover {
+      &::before {
+        background-color: #e5e5e5;
+        border-color: #e5e5e5;
+      }
+    }
+    &:active {
+      &::before {
+        background-color: #d5d5d5;
+        border-color: #d5d5d5;
+      }
+    }
   }
   &--checkbox {
-    margin-left: 42px;
+    position: relative;
+    margin-left: 80px;
     margin-right: 80px;
     white-space: nowrap;
     font-size: 18px;
     font-weight: 700;
     line-height: 80px;
     text-transform: none;
+    &::before {
+      position: absolute;
+      top: -15px;
+      display: block;
+      content: " ";
+      width: 56px;
+      height: 56px;
+      background-color: #f2f2f2;
+      border-radius: 6px;
+    }
+    &:hover {
+      &::before {
+        background-color: #e5e5e5;
+        border-color: #e5e5e5;
+      }
+    }
+    &:active {
+      &::before {
+        background-color: #d5d5d5;
+        border-color: #d5d5d5;
+      }
+    }
   }
   @media (min-width: @tablet-width) {
     &--radio {
       padding-left: 37px;
       padding-right: 20px;
       line-height: 77px;
+      &:before {
+        left: -40px;
+      }
     }
     &--contacts {
       margin-bottom: 18px;
     }
     &--checkbox {
-      margin-left: 45px;
+      margin-left: 110px;
       margin-right: 0;
+      &::before {
+        left: -80px;
+      }
     }
     &--contacts {
       display: inline;
@@ -223,6 +461,9 @@
     &--radio {
       padding-left: 102px;
       padding-right: 160px;
+      &:before {
+        left: 23px;
+      }
     }
     &--contacts {
       position: relative;
@@ -242,6 +483,7 @@
 }
 .form-group__item-input {
   padding: 15px;
+  font-family: "PT Sans";
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -250,22 +492,58 @@
   border: none;
   background-color: @form-item-background;
   &--text {
-    padding-left: 25px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    letter-spacing: -1px;
+    &:hover {
+      background-color: @input-hover-background;
+    }
+    &:active,
+    &:focus {
+      background-color: white;
+      box-shadow:inset 0 0 0 4px @input-border-color;
+      border: none;
+      outline: none;
+    }
   }
   &--tel {
-      padding-left: 20px;
+    padding-left: 20px;
+    &:hover {
+      background-color: @input-hover-background;
+    }
+    &:active,
+    &:focus {
+      background-color: white;
+      box-shadow:inset 0 0 0 4px @input-border-color;
+      border: none;
+      outline: none;
+    }
   }
   &--mail {
-      padding-left: 20px;
+    padding-left: 20px;
+    &:hover {
+      background-color: @input-hover-background;
+    }
+    &:active,
+    &:focus {
+      background-color: white;
+      box-shadow:inset 0 0 0 4px @input-border-color;
+      border: none;
+      outline: none;
+    }
   }
   &--radio {
     margin-left: 20px;
+    .visually-hidden;
   }
   &--checkbox {
     margin-left: 20px;
+    .visually-hidden;
   }
   @media (min-width: @tablet-width) {
     &--text {
+      box-sizing: border-box;
       width: 100%;
     }
     &--tel {
@@ -293,6 +571,16 @@
     }
   }
 }
+.form-group__item-input--radio:checked + label {
+  &::before {
+    background-color: black;
+  }
+  &:active {
+    &::before {
+      background-color: rgba(0,0,0,0.3);
+    }
+  }
+}
 .form-group__item {
   &--textarea {
     padding-top: 17px;
@@ -309,5 +597,15 @@
     border: none;
     resize: none;
     background-color: @form-item-background;
+    &:hover {
+      background-color: @input-hover-background;
+    }
+    &:active,
+    &:focus {
+      background-color: white;
+      box-shadow:inset 0 0 0 4px @input-border-color;
+      border: none;
+      outline: none;
+    }
   }
 }

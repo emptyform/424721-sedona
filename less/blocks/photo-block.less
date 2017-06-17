@@ -1,7 +1,16 @@
 .photo-block {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 19px;
-  outline: 1px solid blue;
+  &::before {
+    position: absolute;
+    top: -1px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
   @media (min-width: @tablet-width) {
     padding-top: 0;
     padding-bottom: 13px;
@@ -12,6 +21,9 @@
     background-color: #f2f2f2;
     &:first-child {
       width: 100%;
+    }
+    &::before {
+      display: none;
     }
   }
   @media (min-width: @desktop-width) {
@@ -28,9 +40,23 @@
   box-sizing: border-box;
   width: 100%;
   @media (min-width: @desktop-width) {
+    position: relative;
     margin: 0;
     padding: 0;
     line-height: 0px;
+    &::after {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      display: block;
+      box-sizing: border-box;
+      content: " ";
+      width: 100%;
+      height: 83px;
+      background-color: black;
+      opacity: 0.3;
+      z-index: 0;
+    }
   }
 }
 .photo-block__icon {
@@ -61,19 +87,7 @@
   @media (min-width: @desktop-width) {
     position: relative;
     margin-top: -65px;
-    &::after {
-      position: absolute;
-      top: -17px;
-      left: 0px;
-      display: block;
-      box-sizing: border-box;
-      content: " ";
-      width: 100%;
-      height: 83px;
-      background-color: black;
-      opacity: 0.3;
-      z-index: 2;
-    }
+    z-index: 3;
   }
 }
 .photo-block__author {
@@ -87,7 +101,9 @@
     margin-left: 20px;
   }
   @media (min-width: @desktop-width) {
+    position: relative;
     margin-top: -42px;
+    z-index: 3;
   }
 }
 .photo-block__like-item {
@@ -97,12 +113,15 @@
   width: 23px;
   height: 21px;
   background-color: lightgray;
+  cursor: pointer;
   @media (min-width: @tablet-width) {
     margin-top: -12px;
     margin-left: auto;
   }
   @media (min-width: @desktop-width) {
     margin-top: -53px;
+    position: relative;
+    z-index: 3;
   }
 }
 .photo-block__like-total {
@@ -121,5 +140,7 @@
   }
   @media (min-width: @desktop-width) {
     margin-top: -53px;
+    position: relative;
+    z-index: 3;
   }
 }
