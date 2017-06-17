@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -41,7 +42,19 @@
       <section class="main-gallery">
         <div class="photo-block main-gallery__item">
           <a class="photo-block__link" href="#">
-            <img class="photo-block__icon photo-block__icon--top" src="img/photo-1-desktop.jpg" alt="фотография">
+            <picture>
+              <source 
+                media="(min-width: 1200px)"
+                srcset="  img/photo-1-desktop@1x.jpg 1x,
+                          img/photo-1-desktop@2x.jpg 2x">
+              <source 
+                media="(min-width: 768px)"
+                srcset="  img/photo-1-tablet@1x.jpg 1x,
+                          img/photo-1-tablet@2x.jpg 2x">
+               <img class="photo-block__icon photo-block__icon--top" 
+                src="   img/photo-1-mobile@1x.jpg"
+                srcset="img/photo-1-mobile@2x.jpg 2x"   alt="фотография">   
+            </picture>
           </a>
           <h3 class="photo-block__caption">Неродные просторы</h3>
           <div class="photo-block__author">Автор фото: Борис</div>
@@ -52,7 +65,19 @@
         </div>
         <div class="photo-block main-gallery__item">
           <a class="photo-block__link" href="#">
-            <img class="photo-block__icon" src="img/photo-2-desktop.jpg" alt="фотография">
+              <picture>
+                <source 
+                  media="(min-width: 1200px)"
+                  srcset="  img/photo-2-desktop@1x.jpg 1x,
+                            img/photo-2-desktop@2x.jpg 2x">
+                <source 
+                  media="(min-width: 768px)"
+                  srcset="  img/photo-2-tablet@1x.jpg 1x,
+                            img/photo-2-tablet@2x.jpg 2x">
+                <img class="photo-block__icon"
+                  src="   img/photo-2-mobile@1x.jpg"
+                  srcset="img/photo-2-mobile@2x.jpg 2x" alt="фотография">
+              </picture>
           </a>
           <h3 class="photo-block__caption">Местная растительность</h3>
           <div class="photo-block__author">Автор фото: Сергей</div>
@@ -63,7 +88,19 @@
         </div>
         <div class="photo-block main-gallery__item">
           <a class="photo-block__link" href="#">
-            <img class="photo-block__icon" src="img/photo-3-desktop.jpg" alt="фотография">
+              <picture>
+                <source 
+                  media="(min-width: 1200px)"
+                  srcset="  img/photo-3-desktop@1x.jpg 1x,
+                            img/photo-3-desktop@2x.jpg 2x">
+                <source 
+                  media="(min-width: 768px)"
+                  srcset="  img/photo-3-tablet@1x.jpg 1x,
+                            img/photo-3-tablet@2x.jpg 2x">
+                <img class="photo-block__icon"
+                  src="img/photo-3-mobile@1x.jpg"
+                  srcset="img/photo-3-mobile@1x.jpg 2x" alt="фотография">
+              </picture>
           </a>
           <h3 class="photo-block__caption">Дорога на север</h3>
           <div class="photo-block__author">Автор фото: Петр</div>
@@ -74,7 +111,19 @@
         </div>
         <div class="photo-block main-gallery__item">
           <a class="photo-block__link" href="#">
-            <img class="photo-block__icon" src="img/photo-4-desktop.jpg" alt="фотография">
+              <picture>
+                <source 
+                  media="(min-width: 1200px)"
+                  srcset="  img/photo-4-desktop@1x.jpg 1x,
+                            img/photo-4-desktop@2x.jpg 2x">
+                <source 
+                  media="(min-width: 768px)"
+                  srcset="  img/photo-4-tablet@1x.jpg 1x,
+                            img/photo-4-tablet@2x.jpg 2x">
+                <img class="photo-block__icon"
+                  src="   img/photo-4-mobile@1x.jpg"
+                  srcset="img/photo-4-mobile@2x.jpg 2x" alt="фотография">
+              </picture>
           </a>
           <h3 class="photo-block__caption">Мост дьявола</h3>
           <div class="photo-block__author">Автор фото: Антон</div>
