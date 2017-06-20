@@ -364,10 +364,28 @@
     padding-right: 14px;
   }
   &--contacts {
+    position: relative;
     display: block;
     margin-top: 16px;
     margin-bottom: 6px;
     margin-left: 20px;
+    &::before {
+      position: absolute;
+      top: 32px;
+      left: 200px;
+      display: block;
+      content: " ";
+      width: 58px;
+      height: 56px;
+      background-color: #e6e6e6;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 2;
+    }
+    &:first-of-type::before {
+      background-image: url("../img/icon-phone.svg");
+    }
   }
   &--radio {
     position: relative;
@@ -445,6 +463,9 @@
     }
     &--contacts {
       margin-bottom: 18px;
+      &::before {
+        left: 568px;
+      }
     }
     &--checkbox {
       margin-left: 110px;
@@ -469,9 +490,17 @@
       position: relative;
       margin-left: 0px;
       margin-right: 10px;
+      &::before {
+        top: -20px;
+        left: 420px;
+      }
       &:first-of-type::before {
+        left: 430px;
+      }
+      &:first-of-type::after {
         position: absolute;
         bottom: 0;
+        left: 0;
         display: inline;
         width: 90px;
         height: 20px;
@@ -508,6 +537,7 @@
     }
   }
   &--tel {
+    position: relative;
     padding-left: 20px;
     &:hover {
       background-color: @input-hover-background;
@@ -521,6 +551,7 @@
     }
   }
   &--mail {
+    position: relative;
     padding-left: 20px;
     &:hover {
       background-color: @input-hover-background;
@@ -571,6 +602,12 @@
     }
   }
 }
+.form-group__tick {
+  position: absolute;
+  top: 4px;
+  left: -62px;
+  display: none;
+}
 .form-group__item-input--radio:checked + label {
   &::before {
     background-color: black;
@@ -579,6 +616,12 @@
     &::before {
       background-color: rgba(0,0,0,0.3);
     }
+  }
+}
+.form-group__item-input--checkbox:checked + label .form-group__tick {
+  display: block;
+  &:active {
+    fill: #a5a5a5;
   }
 }
 .form-group__item {
