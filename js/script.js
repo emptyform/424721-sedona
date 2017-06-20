@@ -6,8 +6,3 @@ button.addEventListener("click",function() {
   nav.classList.toggle("nav-list--hided");
   button.classList.toggle("navigation-button--closed");
 });
-
-
-
-
-
