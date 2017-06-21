@@ -17,3 +17,16 @@
   transform: translateX(-50%);
   z-index: 2;
 }
+.header-logo__part {
+  display: none;
+  @media (min-width: @tablet-width) {
+    &--tablet {
+      display: block;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &--desktop {
+      display: block;
+    }
+  }
+}

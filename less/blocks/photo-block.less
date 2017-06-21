@@ -109,11 +109,9 @@
 .photo-block__like-item {
   display: inline-block;
   vertical-align: middle;
-  font-size: 0;
+  font-size: 0px;
   width: 23px;
   height: 21px;
-  background-color: lightgray;
-  cursor: pointer;
   @media (min-width: @tablet-width) {
     margin-top: -12px;
     margin-left: auto;
@@ -122,6 +120,17 @@
     margin-top: -53px;
     position: relative;
     z-index: 3;
+  }
+}
+.photo-block__like-link {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.photo-block__like-icon {
+  @media (min-width: @desktop-width) {
+    fill: white;
   }
 }
 .photo-block__like-total {
