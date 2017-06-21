@@ -451,6 +451,9 @@ body {
         flex-direction: column;
   }
 }
+.no-js .header-top__button {
+  display: none;
+}
 .header-top__button {
   position: absolute;
   top: 17px;
@@ -529,6 +532,16 @@ body {
 .navigation-button {
   width: 23px;
   height: 23px;
+  background-color: transparent;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+.navigation-button--closed {
+  background-image: url("../img/icon-menu.svg");
+  z-index: 2;
 }
 .nav-list {
   margin: 0;
@@ -629,6 +642,9 @@ body {
     margin-right: 108px;
   }
 }
+.nav-list--hided {
+  display: none;
+}
 .header-promo {
   position: relative;
   height: 389px;
@@ -641,7 +657,7 @@ body {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
   .header-promo {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
   }
 }
 @media (min-width: 768px) {
@@ -656,7 +672,9 @@ body {
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 1.5dppx), (min-width: 768px) and (min-resolution: 144dpi) {
   .header-promo {
-    background-image: url("../img/bg-back-tablet@2x.jpg");
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
+    background-size: 100% auto,
+                        100% auto;
   }
 }
 @media (min-width: 1200px) {
@@ -666,7 +684,7 @@ body {
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 1.5dppx), (min-width: 1200px) and (min-resolution: 144dpi) {
   .header-promo {
-    background-image: url("../img/bg-back-desktop@2x.jpg");
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
   }
 }
 @media (min-width: 768px) {
@@ -1219,6 +1237,7 @@ body {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
   .map {
     background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: 100%;
   }
 }
 @media (min-width: 768px) {
