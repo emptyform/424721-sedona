@@ -83,6 +83,20 @@ module.exports = function(grunt) {
         }
       }
     },
+		
+		minified : {
+			files: {
+				src: [
+				"build/js/**/*.js",
+				"build/js/*.js"
+				],
+				dest: 'build/js/min/'
+			},
+			options : {
+				sourcemap: true,
+				allinone: false
+			}
+		},
 
     imagemin: {
       images: {
@@ -125,6 +139,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
+		"minified",
     "svgmin",
     "imagemin"
   ]);
