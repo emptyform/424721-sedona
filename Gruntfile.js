@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
     clean: {
       build: ["build"]
-    }
+    },
 
     less: {
       style: {
@@ -125,7 +125,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
-    "symbols",
+		"svgmin",
     "imagemin"
   ]);
 };
