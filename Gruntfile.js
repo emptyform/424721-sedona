@@ -125,7 +125,7 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "csso",
-		"svgmin",
+    "svgmin",
     "imagemin"
   ]);
 };
