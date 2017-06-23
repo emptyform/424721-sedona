@@ -90,7 +90,7 @@ module.exports = function(grunt) {
         "build/js/**/*.js",
         "build/js/*.js"
         ],
-        dest: 'build/js/min/'
+        dest: "build/js/min/"
       },
       options : {
         sourcemap: true,
