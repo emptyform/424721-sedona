@@ -312,11 +312,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media (min-width: @tablet-width) {
-    width: @tablet-width;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: 768px;
   }
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
     padding-left: 73px;
     padding-right: 103px;
     justify-content: space-between;
