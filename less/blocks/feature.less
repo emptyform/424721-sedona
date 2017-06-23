@@ -59,6 +59,7 @@
     @media (min-width: @tablet-width) {
       flex-direction: column;
       padding-top: 0px;
+      padding-left: 19px;
       padding-bottom: 27px;
       &::before {
         display: none;
@@ -78,22 +79,22 @@
     width: 256px;
     padding-left: 25px;
     padding-right: 25px;
-    &--img-right {
-      padding-bottom: 38px;
-    }
   }
+}
+.feature--img-right .feature__text {
+  padding-bottom: 0px;
   @media (min-width: @desktop-width) {
-    &--img-right {
-      width: 400px;
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 50px;
-    }
-    &--img-left {
-      width: 400px;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
+    width: 400px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+  }
+}
+.feature--img-left .feature__text {
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 .feature__title {
@@ -113,8 +114,15 @@
     padding-left: 70px;
     padding-right: 70px;
   }
-  &--img-none {
-    @media (min-width: @tablet-width) {
+}
+.feature--img-left .feature__title {
+  @media (min-width: @desktop-width) {
+    padding-left: 85px;
+    padding-right: 84px;
+  }
+}
+.feature--img-none .feature__title {
+  @media (min-width: @tablet-width) {
       padding-left: 40px;
       padding-right: 40px;
     }
@@ -123,13 +131,6 @@
       padding-left: 120px;
       padding-right: 120px;
     }
-  }
-  &--img-left {
-    @media (min-width: @desktop-width) {
-      padding-left: 85px;
-      padding-right: 84px;
-    }
-  }
 }
 .feature__number {
   padding-top: 6px;
@@ -146,18 +147,18 @@
   @media (min-width: @tablet-width) {
     margin-top: 22px;
   }
-  &--img-none {
-    @media (min-width: @tablet-width) {
-      padding-left: 32px;
-      padding-right: 32px;
-    }
+}
+.feature--img-left .feature__description {
+  @media (min-width: @desktop-width) {
+    padding-left: 50px;
+    padding-right: 50px;
   }
-  &--img-left {
-    @media (min-width: @desktop-width) {
-      padding-left: 50px;
-      padding-right: 50px;
+}
+.feature--img-none .feature__description {
+  @media (min-width: @tablet-width) {
+      padding-left: 30px;
+      padding-right: 29px;
     }
-  }
 }
 .feature__photo {
   margin-top: 23px;

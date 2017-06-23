@@ -281,7 +281,7 @@
     }
     &--checkbox {
       margin-bottom: 20px;
-      padding-left: 200px;
+      padding-left: 165px;
       padding-right: 200px;
     }
     &--contacts {
@@ -312,6 +312,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-left: -20px;
+    width: 768px;
+  }
   @media (min-width: @desktop-width) {
     padding-left: 73px;
     padding-right: 103px;
@@ -512,7 +516,7 @@
 }
 .form-group__item-input {
   padding: 15px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Verdana, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
