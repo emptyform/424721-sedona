@@ -31,11 +31,7 @@
     flex-direction: row-reverse;
     @media (min-width: @tablet-width) {
       padding-top: 0px;
-<<<<<<< HEAD
       padding-bottom: 4px;
-=======
-      padding-bottom: 0px;
->>>>>>> 64c6fbfb3bc94d1d86f3374f5bdf3585c87cbb4f
     }
   }
   &--img-none {
@@ -91,6 +87,9 @@
 }
 .feature--img-right .feature__text {
   padding-bottom: 0px;
+	@media (min-width: @tablet-width) {
+		padding-bottom: 38px;
+	}
   @media (min-width: @desktop-width) {
     width: 400px;
     padding-left: 40px;
