@@ -23,7 +23,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `.travis.yml`, `package.json`.
 
 #### 2. Создайте форк
 
-Откройте репозиторий и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
+Откройте репозиторий. Репозиторий из Академии будет скопирован в ваш аккаунт.
 
 <img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/15455709/984b9002-206d-11e6-89fd-63eeaadc25df.png">
 
